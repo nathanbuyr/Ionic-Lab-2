@@ -13,8 +13,22 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  
+    <!--<ul>
+      <li *ngFor="let movie of movies">
+        <img src={{movie.Poster}} width="400" height="250">
+        <p>{{movie.Title}}</p>
+        <P>{{movie.Year}}</P>
+      </li>
+    </ul>!-->
+    
+    <ion-card *ngFor="let movie of movies">
+      <img alt="MovieTitle" src={{movie.Poster}} width="200" height="250"/>
+      <ion-card-header>
+        <ion-card-title>{{movie.Title}}</ion-card-title>
+        <ion-card-subtitle>{{movie.Year}}</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+ 
+  
 </ion-content>
